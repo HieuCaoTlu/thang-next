@@ -7,11 +7,13 @@ export interface CacheEntry {
   uploadedAt: number;
 }
 
-export type FileType = 'actual' | 'plan';
+export type FileType = 'actual' | 'plan' | 'inventory_overview' | 'inventory_detailed';
 
 const CACHE_KEYS: Record<FileType, string> = {
   actual: 'dashboard_actual_cache',
   plan: 'dashboard_plan_cache',
+  inventory_overview: 'dashboard_inventory_overview_cache',
+  inventory_detailed: 'dashboard_inventory_detailed_cache',
 };
 
 export function getCached(type: FileType): CacheEntry | null {

@@ -8,6 +8,8 @@ const API_SECRET = process.env.CLOUDINARY_API_SECRET!;
 const PUBLIC_IDS: Record<string, string> = {
   actual: 'dashboard/actual',
   plan: 'dashboard/plan',
+  inventory_overview: 'dashboard/inventory_overview',
+  inventory_detailed: 'dashboard/inventory_detailed',
 };
 
 export async function POST(req: NextRequest) {
