@@ -743,8 +743,8 @@ export default function App() {
       {/* SIDEBAR */}
       <Sidebar
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        setActiveTeamTab={setActiveTeamTab}
+        setActiveTab={(v) => setActiveTab(v as Tab)}
+        setActiveTeamTab={(v) => setActiveTeamTab(v as TeamTab)}
         isViewOnly={isViewOnly}
         onLogout={() => { sessionStorage.removeItem('dashboardUser'); setUser(null); setIsViewOnly(false); }}
         onExitViewOnly={() => { setIsViewOnly(false); setUser(null); }}
